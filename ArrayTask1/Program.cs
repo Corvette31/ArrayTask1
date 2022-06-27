@@ -7,8 +7,8 @@ namespace ArrayTask1
         static void Main(string[] args)
         {
             Random random = new Random();
-            int arrayColumns = 5;
-            int arryaRows = 5;
+            int arrayColumns = 3;
+            int arryaRows = 4;
             int itemMinValue = 1;
             int itemMaxValue = 9;
             int[,] array = new int[arryaRows, arrayColumns];
@@ -30,12 +30,12 @@ namespace ArrayTask1
                 Console.WriteLine();
             }
 
-            for (int i = 0; i < arryaRows; i++)
+            for (int i = 0; i < array.GetLength(1); i++)
             {
                 sum += array[row, i];
             }
 
-            for (int i = 0; i < arrayColumns; i++)
+            for (int i = 0; i < array.GetLength(0); i++)
             {
                 productNumbers *= array[i, column];
             }
