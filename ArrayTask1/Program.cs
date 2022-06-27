@@ -25,22 +25,22 @@ namespace ArrayTask1
                 {
                     array[i, j] = random.Next(itemMinValue, itemMaxValue);
                     Console.Write($"{array[i, j]} ");
-
-                    if (i == row)
-                    {
-                        sum += array[i, j];
-                    }
-
-                    if (j == column)
-                    {
-                        productNumbers *= array[i, j];
-                    }
                 }
 
                 Console.WriteLine();
             }
 
-            Console.WriteLine($"Сумма строки {++row} равна : {sum} , произвидение {++column} столбца равна: {productNumbers}");
+            for (int i = 0; i < arryaRows; i++)
+            {
+                sum += array[row, i];
+            }
+
+            for (int i = 0; i < arrayColumns; i++)
+            {
+                productNumbers *= array[i, column];
+            }
+
+            Console.WriteLine($"Сумма строки {row + 1} равна : {sum} , произвидение {column + 1} столбца равна: {productNumbers}");
         }
     }
 }
